@@ -41,25 +41,31 @@ const Favorites = () => {
         <h2 className="mb-3 md:mb-5 text-xs md:text-base md:text-white font-bold uppercase w-full truncate">
           Favoritos
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {favMovies?.map((fv) => (
-            <div key={fv.id} className="relative">
-              <CardMovie
-                movieId={fv.id}
-                imageSrc={`https://image.tmdb.org/t/p/original/${fv.poster_path}`}
-                title={fv.title}
-              />
-              <Button
-                variant="destructive"
-                size={"sm"}
-                className="absolute top-0 bg-gray-500"
-                onClick={() => handleRemoveFromFavorites(fv.id)}
-              >
-                <TrashIcon />
-              </Button>
-            </div>
-          ))}
-        </div>
+        {favMovies && favMovies.length === 0 ? (
+          <div className="text-center text-gray-400 py-10">
+            Nenhum filme favorito encontrado.
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {favMovies?.map((fv) => (
+              <div key={fv.id} className="relative">
+                <CardMovie
+                  movieId={fv.id}
+                  imageSrc={`https://image.tmdb.org/t/p/original/${fv.poster_path}`}
+                  title={fv.title}
+                />
+                <Button
+                  variant="destructive"
+                  size={"sm"}
+                  className="absolute top-0 bg-gray-500"
+                  onClick={() => handleRemoveFromFavorites(fv.id)}
+                >
+                  <TrashIcon />
+                </Button>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
