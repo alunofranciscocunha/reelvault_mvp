@@ -31,7 +31,7 @@ Este projeto é um MVP (Produto Mínimo Viável) de uma aplicação web para cat
    - Renomeie o arquivo `.env.example` para `.env` na raiz do projeto.
    - Abra o `.env` e adicione a seguinte linha, substituindo `SUA_API_KEY_AQUI` pelo token copiado:
      ```
-     NEXT_PUBLIC_TMDB_TOKEN=SUA_API_KEY_AQUI
+     NEXT_PUBLIC_TMDB_TOKEN="SUA_API_KEY_AQUI"
      ```
 
 ## Execução
