@@ -2,6 +2,8 @@
 
 ReelVault é um MVP de uma plataforma para explorar, favoritar e comentar filmes, com interface moderna e responsiva.
 
+- [Ver o projeto na pratica](https://reel-vault-mvp.vercel.app/)
+
 ## Descrição
 
 Este projeto é um MVP (Produto Mínimo Viável) de uma aplicação web para catálogo de filmes, permitindo aos usuários visualizar detalhes, favoritar e comentar sobre filmes. Utiliza Next.js, React, TailwindCSS e integrações modernas para UI.
